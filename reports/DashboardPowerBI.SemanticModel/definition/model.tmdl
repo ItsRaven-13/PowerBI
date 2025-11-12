@@ -1,0 +1,21 @@
+model Model
+	culture: es-MX
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-MX
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode","TMDL-Extension"]
+
+annotation PBI_QueryOrder = ["dataRout","Respuestas","Medidas"]
+
+ref table Respuestas
+ref table DateTableTemplate_b94e8b50-b7fc-4c19-8a12-62f7304a6840
+ref table LocalDateTable_03886bc0-d183-45b9-bc51-f7b9a643dddf
+ref table Medidas
+
+ref cultureInfo es-MX
+

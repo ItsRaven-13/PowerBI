@@ -1,0 +1,116 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.0.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY25SU10",
+      "reportVersionAtImport": {
+        "visual": "2.1.0",
+        "report": "3.0.0",
+        "page": "2.3.0"
+      },
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "Power_BI_Theme_Generator_-_BIB5135312960978798.json",
+      "reportVersionAtImport": {
+        "visual": "2.1.0",
+        "report": "3.0.0",
+        "page": "2.3.0"
+      },
+      "type": "RegisteredResources"
+    }
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          },
+          "visible": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY25SU10",
+          "path": "BaseThemes/CY25SU10.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "Power_BI_Theme_Generator_-_BIB5135312960978798.json",
+          "path": "Power_BI_Theme_Generator_-_BIB5135312960978798.json",
+          "type": "CustomTheme"
+        },
+        {
+          "name": "add_chart_24dp_08692B_FILL0_wg18102552654546644.png",
+          "path": "add_chart_24dp_08692B_FILL0_wg18102552654546644.png",
+          "type": "Image"
+        },
+        {
+          "name": "warning_24dp_F19E39_FILL0_wght4047316381109781.png",
+          "path": "warning_24dp_F19E39_FILL0_wght4047316381109781.png",
+          "type": "Image"
+        },
+        {
+          "name": "work_history_24dp_88A395_FILL0463802640566803.png",
+          "path": "work_history_24dp_88A395_FILL0463802640566803.png",
+          "type": "Image"
+        },
+        {
+          "name": "paid_24dp_773132_FILL0_wght4005140421291048018.png",
+          "path": "paid_24dp_773132_FILL0_wght4005140421291048018.png",
+          "type": "Image"
+        },
+        {
+          "name": "warning_100dp_DA954B_FILL0_wgh12585525587080593.png",
+          "path": "warning_100dp_DA954B_FILL0_wgh12585525587080593.png",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "filterPaneHiddenInEditMode": true,
+    "useDefaultAggregateDisplayName": true
+  }
+}

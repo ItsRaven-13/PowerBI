@@ -1,0 +1,1765 @@
+cultureInfo es-MX
+
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "respuesta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Respuestas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "respuesta": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "respuesta.marca_temporal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Respuestas",
+			          "ConceptualProperty": "Marca temporal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "marca temporal": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "respuesta.marca_temporal.jerarquía_de_fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Respuestas",
+			          "VariationSource": "Marca temporal",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "jerarquía de fecha": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "respuesta.marca_temporal.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Respuestas",
+			          "VariationSource": "Marca temporal",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "marca temporal año": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "respuesta.marca_temporal.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Respuestas",
+			          "VariationSource": "Marca temporal",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "marca temporal trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "respuesta.marca_temporal.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Respuestas",
+			          "VariationSource": "Marca temporal",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "marca temporal me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "respuesta.marca_temporal.día": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Respuestas",
+			          "VariationSource": "Marca temporal",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Día"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "día": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "marca temporal día": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "respuesta.correo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Respuestas",
+			          "ConceptualProperty": "Correo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "correo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "respuesta.grupo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Respuestas",
+			          "ConceptualProperty": "Grupo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "grupo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "respuesta.genero": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Respuestas",
+			          "ConceptualProperty": "Genero"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "genero": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "respuesta.edad": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Respuestas",
+			          "ConceptualProperty": "Edad"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "edad": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "respuesta.promedio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Respuestas",
+			          "ConceptualProperty": "Promedio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "promedio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Rangos de Promedios": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "respuesta.municipio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Respuestas",
+			          "ConceptualProperty": "Municipio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "municipio": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "respuesta.reprobado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Respuestas",
+			          "ConceptualProperty": "Reprobado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "reprobado": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "respuesta.num_reprobada": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Respuestas",
+			          "ConceptualProperty": "Num Reprobadas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "num reprobada": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "number reprobada": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "respuesta.becado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Respuestas",
+			          "ConceptualProperty": "Becado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "becado": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "respuesta.tipo_beca": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Respuestas",
+			          "ConceptualProperty": "Tipo Beca"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo beca": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "respuesta.situacion_laboral": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Respuestas",
+			          "ConceptualProperty": "Situacion Laboral"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "situacion laboral": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "respuesta.transporte": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Respuestas",
+			          "ConceptualProperty": "Transporte"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "transporte": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "respuesta.discapacidad": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Respuestas",
+			          "ConceptualProperty": "Discapacidad"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "discapacidad": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "respuesta.tipo_discapacidad": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Respuestas",
+			          "ConceptualProperty": "Tipo Discapacidad"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo discapacidad": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "respuesta.promedio_numerico": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Respuestas",
+			          "ConceptualProperty": "Promedio numerico"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "promedio numerico": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "respuesta.reprobadas_num": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Respuestas",
+			          "ConceptualProperty": "Reprobadas Num"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "reprobadas num": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "reprobada num": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "reprobada number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medida": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.promedio_general": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Promedio General"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "promedio general": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.percent_reprobacion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Percent Reprobacion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "percent reprobacion": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.alumnos_riesgo_promedio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Alumnos Riesgo Promedio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "alumnos riesgo promedio": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.percent_becados": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Percent Becados"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "percent becados": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "% de alumnos becados": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.percent_trabaja": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Percent Trabaja"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "percent trabaja": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "% de alumnos que trabajan": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.percent_alto_rendimiento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Percent Alto Rendimiento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "percent alto rendimiento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.promedio_de_riesgo_reprobadas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Promedio de Riesgo Reprobadas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "promedio de riesgo reprobadas": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "respuesta_marca_temporal_me_has_respuesta_marca_temporal_día": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta.marca_temporal.me": {
+			          "Target": {
+			            "Entity": "respuesta.marca_temporal.me"
+			          }
+			        },
+			        "respuesta.marca_temporal.día": {
+			          "Target": {
+			            "Entity": "respuesta.marca_temporal.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta.marca_temporal.me"
+			            },
+			            "Object": {
+			              "Role": "respuesta.marca_temporal.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_días2"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta.marca_temporal.día"
+			            },
+			            "Object": {
+			              "Role": "respuesta.marca_temporal.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_have_me2"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "respuesta.marca_temporal.día"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "respuesta.marca_temporal.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_are_in_me"
+			        }
+			      ]
+			    },
+			    "respuesta_marca_temporal_trimestre_has_respuesta_marca_temporal_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta.marca_temporal.trimestre": {
+			          "Target": {
+			            "Entity": "respuesta.marca_temporal.trimestre"
+			          }
+			        },
+			        "respuesta.marca_temporal.me": {
+			          "Target": {
+			            "Entity": "respuesta.marca_temporal.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta.marca_temporal.trimestre"
+			            },
+			            "Object": {
+			              "Role": "respuesta.marca_temporal.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me2"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta.marca_temporal.me"
+			            },
+			            "Object": {
+			              "Role": "respuesta.marca_temporal.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres2"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "respuesta.marca_temporal.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "respuesta.marca_temporal.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres"
+			        }
+			      ]
+			    },
+			    "respuesta_marca_temporal_año_has_respuesta_marca_temporal_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta.marca_temporal.año": {
+			          "Target": {
+			            "Entity": "respuesta.marca_temporal.año"
+			          }
+			        },
+			        "respuesta.marca_temporal.trimestre": {
+			          "Target": {
+			            "Entity": "respuesta.marca_temporal.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta.marca_temporal.año"
+			            },
+			            "Object": {
+			              "Role": "respuesta.marca_temporal.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "años_have_trimestres2"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta.marca_temporal.trimestre"
+			            },
+			            "Object": {
+			              "Role": "respuesta.marca_temporal.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_años2"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "respuesta.marca_temporal.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "respuesta.marca_temporal.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_años"
+			        }
+			      ]
+			    },
+			    "respuesta_marca_temporal_jerarquía_de_fecha_has_respuesta_marca_temporal_día": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta.marca_temporal.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "respuesta.marca_temporal.jerarquía_de_fecha"
+			          }
+			        },
+			        "respuesta.marca_temporal.día": {
+			          "Target": {
+			            "Entity": "respuesta.marca_temporal.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta.marca_temporal.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "respuesta.marca_temporal.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_días2"
+			        }
+			      ]
+			    },
+			    "respuesta_marca_temporal_jerarquía_de_fecha_has_respuesta_marca_temporal_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta.marca_temporal.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "respuesta.marca_temporal.jerarquía_de_fecha"
+			          }
+			        },
+			        "respuesta.marca_temporal.me": {
+			          "Target": {
+			            "Entity": "respuesta.marca_temporal.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta.marca_temporal.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "respuesta.marca_temporal.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_me2"
+			        }
+			      ]
+			    },
+			    "respuesta_marca_temporal_jerarquía_de_fecha_has_respuesta_marca_temporal_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta.marca_temporal.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "respuesta.marca_temporal.jerarquía_de_fecha"
+			          }
+			        },
+			        "respuesta.marca_temporal.trimestre": {
+			          "Target": {
+			            "Entity": "respuesta.marca_temporal.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta.marca_temporal.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "respuesta.marca_temporal.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_trimestres2"
+			        }
+			      ]
+			    },
+			    "respuesta_marca_temporal_jerarquía_de_fecha_has_respuesta_marca_temporal_año": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta.marca_temporal.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "respuesta.marca_temporal.jerarquía_de_fecha"
+			          }
+			        },
+			        "respuesta.marca_temporal.año": {
+			          "Target": {
+			            "Entity": "respuesta.marca_temporal.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta.marca_temporal.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "respuesta.marca_temporal.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_años2"
+			        }
+			      ]
+			    },
+			    "respuesta_marca_temporal_has_jerarquía_de_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta.marca_temporal": {
+			          "Target": {
+			            "Entity": "respuesta.marca_temporal"
+			          }
+			        },
+			        "respuesta.marca_temporal.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "respuesta.marca_temporal.jerarquía_de_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta.marca_temporal"
+			            },
+			            "Object": {
+			              "Role": "respuesta.marca_temporal.jerarquía_de_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "marca_temporal_have_jerarquía_de_fechas2"
+			        }
+			      ]
+			    },
+			    "respuesta_has_medida_promedio_de_riesgo_reprobadas": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta": {
+			          "Target": {
+			            "Entity": "respuesta"
+			          }
+			        },
+			        "medida.promedio_de_riesgo_reprobadas": {
+			          "Target": {
+			            "Entity": "medida.promedio_de_riesgo_reprobadas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta"
+			            },
+			            "Object": {
+			              "Role": "medida.promedio_de_riesgo_reprobadas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "respuestas_have_promedio_de_riesgo_reprobadas"
+			        }
+			      ]
+			    },
+			    "respuesta_has_medida_percent_alto_rendimiento": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta": {
+			          "Target": {
+			            "Entity": "respuesta"
+			          }
+			        },
+			        "medida.percent_alto_rendimiento": {
+			          "Target": {
+			            "Entity": "medida.percent_alto_rendimiento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta"
+			            },
+			            "Object": {
+			              "Role": "medida.percent_alto_rendimiento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "respuestas_have_percent_alto_rendimiento"
+			        }
+			      ]
+			    },
+			    "respuesta_has_medida_percent_trabaja": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta": {
+			          "Target": {
+			            "Entity": "respuesta"
+			          }
+			        },
+			        "medida.percent_trabaja": {
+			          "Target": {
+			            "Entity": "medida.percent_trabaja"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta"
+			            },
+			            "Object": {
+			              "Role": "medida.percent_trabaja"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "respuestas_have_percent_trabaja"
+			        }
+			      ]
+			    },
+			    "respuesta_has_medida_percent_becados": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta": {
+			          "Target": {
+			            "Entity": "respuesta"
+			          }
+			        },
+			        "medida.percent_becados": {
+			          "Target": {
+			            "Entity": "medida.percent_becados"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta"
+			            },
+			            "Object": {
+			              "Role": "medida.percent_becados"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "respuestas_have_percent_becados"
+			        }
+			      ]
+			    },
+			    "respuesta_has_medida_alumnos_riesgo_promedio": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta": {
+			          "Target": {
+			            "Entity": "respuesta"
+			          }
+			        },
+			        "medida.alumnos_riesgo_promedio": {
+			          "Target": {
+			            "Entity": "medida.alumnos_riesgo_promedio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta"
+			            },
+			            "Object": {
+			              "Role": "medida.alumnos_riesgo_promedio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "respuestas_have_alumnos_riesgo_promedio"
+			        }
+			      ]
+			    },
+			    "respuesta_has_medida_percent_reprobacion": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta": {
+			          "Target": {
+			            "Entity": "respuesta"
+			          }
+			        },
+			        "medida.percent_reprobacion": {
+			          "Target": {
+			            "Entity": "medida.percent_reprobacion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta"
+			            },
+			            "Object": {
+			              "Role": "medida.percent_reprobacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "respuestas_have_percent_reprobacion"
+			        }
+			      ]
+			    },
+			    "respuesta_has_medida_promedio_general": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta": {
+			          "Target": {
+			            "Entity": "respuesta"
+			          }
+			        },
+			        "medida.promedio_general": {
+			          "Target": {
+			            "Entity": "medida.promedio_general"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta"
+			            },
+			            "Object": {
+			              "Role": "medida.promedio_general"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "respuestas_have_promedio_general"
+			        }
+			      ]
+			    },
+			    "respuesta_has_reprobadas_num": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta": {
+			          "Target": {
+			            "Entity": "respuesta"
+			          }
+			        },
+			        "respuesta.reprobadas_num": {
+			          "Target": {
+			            "Entity": "respuesta.reprobadas_num"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta"
+			            },
+			            "Object": {
+			              "Role": "respuesta.reprobadas_num"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "respuestas_have_reprobadas_nums"
+			        }
+			      ]
+			    },
+			    "respuesta_has_promedio_numerico": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta": {
+			          "Target": {
+			            "Entity": "respuesta"
+			          }
+			        },
+			        "respuesta.promedio_numerico": {
+			          "Target": {
+			            "Entity": "respuesta.promedio_numerico"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta"
+			            },
+			            "Object": {
+			              "Role": "respuesta.promedio_numerico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "respuestas_have_promedio_numericos"
+			        }
+			      ]
+			    },
+			    "respuesta_has_tipo_discapacidad": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta": {
+			          "Target": {
+			            "Entity": "respuesta"
+			          }
+			        },
+			        "respuesta.tipo_discapacidad": {
+			          "Target": {
+			            "Entity": "respuesta.tipo_discapacidad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta"
+			            },
+			            "Object": {
+			              "Role": "respuesta.tipo_discapacidad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "respuestas_have_tipo_discapacidads"
+			        }
+			      ]
+			    },
+			    "respuesta_has_discapacidad": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta": {
+			          "Target": {
+			            "Entity": "respuesta"
+			          }
+			        },
+			        "respuesta.discapacidad": {
+			          "Target": {
+			            "Entity": "respuesta.discapacidad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta"
+			            },
+			            "Object": {
+			              "Role": "respuesta.discapacidad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "respuestas_have_discapacidads"
+			        }
+			      ]
+			    },
+			    "respuesta_has_transporte": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta": {
+			          "Target": {
+			            "Entity": "respuesta"
+			          }
+			        },
+			        "respuesta.transporte": {
+			          "Target": {
+			            "Entity": "respuesta.transporte"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta"
+			            },
+			            "Object": {
+			              "Role": "respuesta.transporte"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "respuestas_have_transportes"
+			        }
+			      ]
+			    },
+			    "respuesta_has_situacion_laboral": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta": {
+			          "Target": {
+			            "Entity": "respuesta"
+			          }
+			        },
+			        "respuesta.situacion_laboral": {
+			          "Target": {
+			            "Entity": "respuesta.situacion_laboral"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta"
+			            },
+			            "Object": {
+			              "Role": "respuesta.situacion_laboral"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "respuestas_have_situacion_laborals"
+			        }
+			      ]
+			    },
+			    "respuesta_has_tipo_beca": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta": {
+			          "Target": {
+			            "Entity": "respuesta"
+			          }
+			        },
+			        "respuesta.tipo_beca": {
+			          "Target": {
+			            "Entity": "respuesta.tipo_beca"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta"
+			            },
+			            "Object": {
+			              "Role": "respuesta.tipo_beca"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "respuestas_have_tipo_becas"
+			        }
+			      ]
+			    },
+			    "respuesta_has_becado": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta": {
+			          "Target": {
+			            "Entity": "respuesta"
+			          }
+			        },
+			        "respuesta.becado": {
+			          "Target": {
+			            "Entity": "respuesta.becado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta"
+			            },
+			            "Object": {
+			              "Role": "respuesta.becado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "respuestas_have_becados"
+			        }
+			      ]
+			    },
+			    "respuesta_has_num_reprobada": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta": {
+			          "Target": {
+			            "Entity": "respuesta"
+			          }
+			        },
+			        "respuesta.num_reprobada": {
+			          "Target": {
+			            "Entity": "respuesta.num_reprobada"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta"
+			            },
+			            "Object": {
+			              "Role": "respuesta.num_reprobada"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "respuestas_have_num_reprobadas"
+			        }
+			      ]
+			    },
+			    "respuesta_has_reprobado": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta": {
+			          "Target": {
+			            "Entity": "respuesta"
+			          }
+			        },
+			        "respuesta.reprobado": {
+			          "Target": {
+			            "Entity": "respuesta.reprobado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta"
+			            },
+			            "Object": {
+			              "Role": "respuesta.reprobado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "respuestas_have_reprobados"
+			        }
+			      ]
+			    },
+			    "respuesta_has_municipio": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta": {
+			          "Target": {
+			            "Entity": "respuesta"
+			          }
+			        },
+			        "respuesta.municipio": {
+			          "Target": {
+			            "Entity": "respuesta.municipio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta"
+			            },
+			            "Object": {
+			              "Role": "respuesta.municipio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "respuestas_have_municipios"
+			        }
+			      ]
+			    },
+			    "respuesta_has_promedio": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta": {
+			          "Target": {
+			            "Entity": "respuesta"
+			          }
+			        },
+			        "respuesta.promedio": {
+			          "Target": {
+			            "Entity": "respuesta.promedio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta"
+			            },
+			            "Object": {
+			              "Role": "respuesta.promedio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "respuestas_have_promedios"
+			        }
+			      ]
+			    },
+			    "respuesta_has_edad": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta": {
+			          "Target": {
+			            "Entity": "respuesta"
+			          }
+			        },
+			        "respuesta.edad": {
+			          "Target": {
+			            "Entity": "respuesta.edad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta"
+			            },
+			            "Object": {
+			              "Role": "respuesta.edad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "respuestas_have_edads"
+			        }
+			      ]
+			    },
+			    "respuesta_has_genero": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta": {
+			          "Target": {
+			            "Entity": "respuesta"
+			          }
+			        },
+			        "respuesta.genero": {
+			          "Target": {
+			            "Entity": "respuesta.genero"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta"
+			            },
+			            "Object": {
+			              "Role": "respuesta.genero"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "respuestas_have_generos"
+			        }
+			      ]
+			    },
+			    "respuesta_has_grupo": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta": {
+			          "Target": {
+			            "Entity": "respuesta"
+			          }
+			        },
+			        "respuesta.grupo": {
+			          "Target": {
+			            "Entity": "respuesta.grupo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta"
+			            },
+			            "Object": {
+			              "Role": "respuesta.grupo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "respuestas_have_grupos"
+			        }
+			      ]
+			    },
+			    "respuesta_has_correo": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta": {
+			          "Target": {
+			            "Entity": "respuesta"
+			          }
+			        },
+			        "respuesta.correo": {
+			          "Target": {
+			            "Entity": "respuesta.correo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta"
+			            },
+			            "Object": {
+			              "Role": "respuesta.correo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "respuestas_have_correos"
+			        }
+			      ]
+			    },
+			    "respuesta_has_marca_temporal": {
+			      "Binding": {
+			        "ConceptualEntity": "Respuestas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "respuesta": {
+			          "Target": {
+			            "Entity": "respuesta"
+			          }
+			        },
+			        "respuesta.marca_temporal": {
+			          "Target": {
+			            "Entity": "respuesta.marca_temporal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "respuesta"
+			            },
+			            "Object": {
+			              "Role": "respuesta.marca_temporal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "respuestas_have_marca_temporal"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+

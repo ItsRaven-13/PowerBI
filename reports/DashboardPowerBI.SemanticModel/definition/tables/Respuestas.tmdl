@@ -1,0 +1,171 @@
+table Respuestas
+	lineageTag: ee9873bd-191d-468e-a1b4-357bc8c24a6a
+
+	column 'Marca temporal'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 255e6ac6-5b8f-455c-8ffc-a7f138d54337
+		summarizeBy: none
+		sourceColumn: Marca temporal
+
+		variation Variación
+			isDefault
+			relationship: 428f7a86-a4b1-46a2-8ad7-7078fc2c3565
+			defaultHierarchy: LocalDateTable_03886bc0-d183-45b9-bc51-f7b9a643dddf.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Correo
+		dataType: string
+		lineageTag: bf1ff029-bfd8-4c81-a21e-d8bc5376f6f7
+		summarizeBy: none
+		sourceColumn: Correo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Grupo
+		dataType: string
+		lineageTag: b810b128-8fac-4d13-a03c-5541b03ff158
+		summarizeBy: none
+		sourceColumn: Grupo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Genero
+		dataType: string
+		lineageTag: 55f9500b-7f7d-41b8-9d9e-58d176a46d09
+		summarizeBy: none
+		sourceColumn: Genero
+
+		annotation SummarizationSetBy = Automatic
+
+	column Edad
+		dataType: string
+		lineageTag: 20f185ca-d785-47ef-ae40-e8adf8d1a70b
+		summarizeBy: none
+		sourceColumn: Edad
+
+		annotation SummarizationSetBy = Automatic
+
+	column Promedio
+		dataType: string
+		lineageTag: f3f893b2-c5e9-43ab-ac1a-42024247cb32
+		summarizeBy: none
+		sourceColumn: Promedio
+
+		annotation SummarizationSetBy = User
+
+	column Municipio
+		dataType: string
+		lineageTag: f72ee317-b674-4d2e-a77a-614ade01260c
+		summarizeBy: none
+		sourceColumn: Municipio
+
+		annotation SummarizationSetBy = Automatic
+
+	column Reprobado
+		dataType: string
+		lineageTag: ccd5ba1e-c553-44b5-995c-c2a8c0148aca
+		summarizeBy: none
+		sourceColumn: Reprobado
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Num Reprobadas'
+		dataType: string
+		lineageTag: b6e28c1c-0d36-40d9-89e1-8369b017ed2c
+		summarizeBy: none
+		sourceColumn: Num Reprobadas
+
+		annotation SummarizationSetBy = Automatic
+
+	column Becado
+		dataType: string
+		lineageTag: d8ee532d-ecb9-457d-a5f9-0a36eacc152e
+		summarizeBy: none
+		sourceColumn: Becado
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo Beca'
+		dataType: string
+		lineageTag: 60250ca7-546d-40e4-9c35-c3a19226bd0c
+		summarizeBy: none
+		sourceColumn: Tipo Beca
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Situacion Laboral'
+		dataType: string
+		lineageTag: 5f2ebdef-ae4b-45a4-85fb-2191b52a94ba
+		summarizeBy: none
+		sourceColumn: Situacion Laboral
+
+		annotation SummarizationSetBy = Automatic
+
+	column Transporte
+		dataType: string
+		lineageTag: 15027793-e834-4a24-a3c3-e603d4c61df5
+		summarizeBy: none
+		sourceColumn: Transporte
+
+		annotation SummarizationSetBy = Automatic
+
+	column Discapacidad
+		dataType: string
+		lineageTag: 5d07643c-f7bc-456f-aef7-6508a7190bb2
+		summarizeBy: none
+		sourceColumn: Discapacidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo Discapacidad'
+		dataType: string
+		lineageTag: 9f9a2927-1820-4aeb-9cb1-b80c0c394b46
+		summarizeBy: none
+		sourceColumn: Tipo Discapacidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Promedio numerico'
+		dataType: double
+		lineageTag: b117d523-135e-4d75-b215-24fcb32518da
+		summarizeBy: sum
+		sourceColumn: Promedio numerico
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Reprobadas Num'
+		dataType: int64
+		lineageTag: 959c5c8d-0e08-4cd6-8958-08e12dbdd0c5
+		summarizeBy: sum
+		sourceColumn: Reprobadas Num
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Respuestas = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents(dataRout), null, true),
+				    #"Filas superiores quitadas" = Table.Skip(Origen,1),
+				    Form_Responses_Table = #"Filas superiores quitadas"{[Item="Form_Responses",Kind="Table"]}[Data],
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Form_Responses_Table,{{"Marca temporal", type datetime}, {"Dirección de correo electrónico", type text}, {"¿Cúal es tu grupo?", type text}, {"1.- ¿Cuál es tu género? ", type text}, {"2.- ¿Cuál es tu edad? ", type text}, {"3.- ¿Cuál es tu promedio general actual? ", type text}, {"4.- ¿De qué municipio provienes? ", type text}, {"5.- ¿Has reprobado alguna materia durante tu carrera? ", type text}, {"Si tu respuesta anterior fue “Sí”, indica cuántas materias has reprobado. ", type any}, {"6.- ¿Estas becado?", type text}, {"7.-Si tu respuesta fue ""SI"" indica ¿Qué tipo de beca?", type text}, {"8.- ¿Trabajas mientras estudias o sólo te dedicas a estudiar?", type text}, {"9.- ¿Con que medio de transporte vas a la universidad?", type text}, {"10.- ¿Sufres de alguna enfermedad y/o discapacidad?", type text}, {"10.-Cual", type text}}),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Tipo cambiado",{{"¿Cúal es tu grupo?", "Grupo"}, {"1.- ¿Cuál es tu género? ", "Genero"}, {"2.- ¿Cuál es tu edad? ", "Edad"}, {"Dirección de correo electrónico", "Correo"}, {"9.- ¿Con que medio de transporte vas a la universidad?", "Transporte"}, {"8.- ¿Trabajas mientras estudias o sólo te dedicas a estudiar?", "Situacion Laboral"}, {"7.-Si tu respuesta fue ""SI"" indica ¿Qué tipo de beca?", "Tipo Beca"}, {"6.- ¿Estas becado?", "Becado"}, {"Si tu respuesta anterior fue “Sí”, indica cuántas materias has reprobado. ", "Num Reprobadas"}, {"5.- ¿Has reprobado alguna materia durante tu carrera? ", "Reprobado"}, {"4.- ¿De qué municipio provienes? ", "Municipio"}, {"3.- ¿Cuál es tu promedio general actual? ", "Promedio"}, {"10.- ¿Sufres de alguna enfermedad y/o discapacidad?", "Discapacidad"}, {"10.-Cual", "Tipo Discapacidad"}}),
+				    #"Columna condicional agregada" = Table.AddColumn(#"Columnas con nombre cambiado", "Promedio numerico", each if [Promedio] = "De 8.0 a 8.5" then 8.25 else if [Promedio] = "De 8.6 a 9.0" then 8.8 else if [Promedio] = "De 9.1 a 9.5" then 9.3 else if [Promedio] = "De 9.6 a 10" then 9.8 else 8),
+				    #"Columna condicional agregada1" = Table.AddColumn(#"Columna condicional agregada", "Reprobadas Num", each if [Num Reprobadas] = "3 o mas" then 3 else if [Num Reprobadas] = 1 then 1 else if [Num Reprobadas] = 2 then 2 else 0)
+				in
+				    #"Columna condicional agregada1"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

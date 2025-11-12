@@ -1,0 +1,7 @@
+expression dataRout = "C:\dev\data.xlsx" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 6f7121c3-cda1-4cf1-9de6-96d064077ae1
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Text
+

@@ -1,0 +1,5 @@
+relationship 428f7a86-a4b1-46a2-8ad7-7078fc2c3565
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Respuestas.'Marca temporal'
+	toColumn: LocalDateTable_03886bc0-d183-45b9-bc51-f7b9a643dddf.Date
+

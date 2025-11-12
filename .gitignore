@@ -1,0 +1,46 @@
+# --- Configuraciones locales y cachés ---
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+**/.pbi/editorSettings.json
+
+# --- Archivos de plataforma y backups locales ---
+**/.pbip.user
+**/.pbip.backup
+
+# --- Archivos binarios o temporales de Power BI ---
+# *.pbix
+*.pbit
+*.DataMashup
+*.DataModel
+*.pbitool.json
+
+# --- Archivos generados por el sistema o el editor ---
+.vscode/
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+*.bak*
+
+# --- Archivos temporales o de conflictos de Git ---
+*.orig
+
+# --- Archivos de configuración o usuario (VS Code) ---
+*.code-workspace
+*.log
+
+# --- Carpetas comunes de builds o temporales ---
+**/bin/
+**/obj/
+**/temp/
+**/tmp/
+
+# --- Archivos de seguridad / credenciales (por precaución) ---
+*.key
+*.crt
+*.pem
+*.env
+.env.local
+
+# --- fuentes de datos locales ---
+**/data/*

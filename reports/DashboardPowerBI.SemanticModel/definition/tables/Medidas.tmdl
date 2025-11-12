@@ -1,0 +1,86 @@
+table Medidas
+	lineageTag: 5a259d79-2204-4f4d-bcd1-08e7efcc74af
+
+	measure 'Promedio General' = AVERAGE(Respuestas[Promedio numerico])
+		formatString: 0.00
+		lineageTag: 48218915-6edc-4410-9a89-2f8aaba19d00
+
+	measure 'Percent Reprobacion' = DIVIDE( CALCULATE(COUNTROWS(Respuestas), Respuestas[Reprobado] = "Si"), COUNTROWS(Respuestas))
+		lineageTag: c3770613-2224-466e-9c51-3523a5556a21
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Alumnos Riesgo Promedio' = CALCULATE(COUNTROWS(Respuestas), FILTER(Respuestas, Respuestas[Promedio numerico] < 8.5))
+		formatString: 0
+		lineageTag: d4f0ee63-3f65-48d4-8842-f01cfc5b2420
+
+	measure 'Percent Becados' = DIVIDE( CALCULATE(COUNTROWS(Respuestas), Respuestas[Becado] = "Si"), COUNTROWS(Respuestas))
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: f28f376e-39fd-4f6f-9a83-084ec8e946f7
+
+	measure 'Percent Trabaja' =
+			
+			DIVIDE(
+			    CALCULATE(
+			        COUNTROWS(Respuestas),
+			        FILTER(
+			            Respuestas,
+			            -- Incluye trabajo de tiempo completo, medio tiempo, y temporal
+			            Respuestas[Situacion Laboral] = "Si, trabajo en medio tiempo" ||
+			            Respuestas[Situacion Laboral] = "Si, trabajo el tiempo completo" ||
+			            Respuestas[Situacion Laboral] = "A veces hago trabajos temporales"
+			        )
+			    ),
+			    COUNTROWS(Respuestas)
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: fcb44d69-3492-4684-b257-f3c6c1e780e2
+
+	measure 'Percent Alto Rendimiento' = DIVIDE( CALCULATE(COUNTROWS(Respuestas), Respuestas[Promedio] = "De 9.6 a 10"), COUNTROWS(Respuestas))
+		lineageTag: b1719dc5-fc95-4ada-bbfa-4ee4a12c76cd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Promedio de Riesgo Reprobadas' = ```
+			
+			CALCULATE(
+			    AVERAGE(Respuestas[Promedio Numerico]),
+			    FILTER(
+			        Respuestas, 
+			        Respuestas[Reprobado] = "Si"
+			    )
+			)
+			```
+		lineageTag: 4cff125c-7d27-4b27-ad76-796f12f8ab45
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Alumnos Riesgo Reprobadas' = CALCULATE(COUNTROWS(Respuestas), FILTER(Respuestas, Respuestas[Num Reprobadas] = "3 o mas"))
+		formatString: 0
+		lineageTag: aac60be2-9181-441a-8288-cd12edb27627
+
+	measure 'Alumnos Riesgo Total' =
+			
+			CALCULATE(
+			    COUNTROWS(Respuestas),
+			    FILTER(
+			        Respuestas,
+			        Respuestas[Promedio numerico] < 8.5
+			        || Respuestas[Num Reprobadas] = "3 o mas"
+			    )
+			)
+		formatString: 0
+		lineageTag: f0cd95a3-55bd-4005-ab71-ea5083076f15
+
+	partition Medidas = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Columna1 = _t]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Columna1", type text}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"Columna1"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_ResultType = Table
+
