@@ -17,15 +17,12 @@ jobs:
       - name: Descargar e instalar pbi-tools v1.2.0
         shell: pwsh
         run: |
-          # URL del Core CLI (más fiable para entornos de automatización)
           $url = "https://github.com/pbi-tools/pbi-tools/releases/download/1.2.0/pbi-tools.1.2.0.zip"
           
-          # SOLUCIÓN: Agregar encabezado User-Agent para evitar el error "Not Found"
           $headers = @{ "User-Agent" = "GitHubActionsRunner/1.0" }
 
           Write-Host "Descargando pbi-tools desde: $url"
           
-          # Descarga robusta usando el encabezado
           Invoke-WebRequest -Uri $url -OutFile "pbi-tools.zip" -Headers $headers -UseBasicParsing
           
           Expand-Archive -Path "pbi-tools.zip" -DestinationPath "pbi-tools"
