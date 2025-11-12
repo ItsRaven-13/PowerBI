@@ -1,12 +1,10 @@
-name: Validar Power BI Reports
+name: Validar Power BI
 
 on:
   push:
     branches:
       - main
   pull_request:
-    branches:
-      - main
 
 jobs:
   validar:
@@ -18,21 +16,14 @@ jobs:
 
       - name: Descargar pbi-tools
         run: |
-          Invoke-WebRequest -Uri "https://github.com/pbi-tools/pbi-tools/releases/download/v1.3.0/pbi-tools-win-x64.zip" -OutFile "pbi-tools.zip"
-          Expand-Archive -Path "pbi-tools.zip" -DestinationPath "pbi-tools"
-          echo "##vso[task.prependpath]$(Resolve-Path ./pbi-tools)"
-        shell: pwsh
+          Invoke-WebRequest -Uri "https://github.com/pbi-tools/pbi-tools/releases/download/v1.2.0/pbi-tools.core.1.2.0_win-x64.zip" -OutFile "pbi-tools.zip"
+          Expand-Archive pbi-tools.zip -DestinationPath "pbi-tools"
+          $env:Path += ";$(Get-Location)\pbi-tools"
 
-      - name: Validar archivos .pbix en /reports
+      - name: Verificar versión de pbi-tools
         run: |
-          $reports = Get-ChildItem -Path "reports" -Recurse -Filter "*.pbix"
-          if ($reports.Count -eq 0) {
-              Write-Host "No se encontraron archivos .pbix en la carpeta 'reports'."
-              exit 1
-          }
+          .\pbi-tools\pbi-tools.exe --version
 
-          foreach ($report in $reports) {
-              Write-Host "Validando archivo: $($report.FullName)"
-              ./pbi-tools/pbi-tools.exe info -pbixPath $report.FullName
-          }
-        shell: pwsh
+      - name: Ejecutar validación del CSV
+        run: |
+          powershell -ExecutionPolicy Bypass -File "reports\test-validar-respuestas.ps1"
