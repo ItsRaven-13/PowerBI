@@ -1,10 +1,10 @@
-name: Validar Power BI
+name: Validar Power BI con pbi-tools
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   pull_request:
+    branches: [ main ]
 
 jobs:
   validar:
@@ -14,16 +14,17 @@ jobs:
       - name: Checkout del repositorio
         uses: actions/checkout@v4
 
-      - name: Descargar pbi-tools
+      - name: Descargar pbi-tools v1.2.0
+        shell: pwsh
         run: |
-          Invoke-WebRequest -Uri "https://github.com/pbi-tools/pbi-tools/releases/download/v1.2.0/pbi-tools.core.1.2.0_win-x64.zip" -OutFile "pbi-tools.zip"
-          Expand-Archive pbi-tools.zip -DestinationPath "pbi-tools"
-          $env:Path += ";$(Get-Location)\pbi-tools"
+          $version = "v1.2.0"
+          $url = "https://github.com/pbi-tools/pbi-tools/releases/download/$version/pbi-tools.core.1.2.0_win-x64.zip"
+          Invoke-WebRequest -Uri $url -OutFile "pbi-tools.zip"
+          Expand-Archive -Path "pbi-tools.zip" -DestinationPath "pbi-tools"
+          $env:PATH += ";$(Get-Location)\pbi-tools"
+          Write-Host "pbi-tools descargado e instalado."
 
-      - name: Verificar versión de pbi-tools
+      - name: Ejecutar validación CSV
+        shell: pwsh
         run: |
-          .\pbi-tools\pbi-tools.exe --version
-
-      - name: Ejecutar validación del CSV
-        run: |
-          powershell -ExecutionPolicy Bypass -File "reports\test-validar-respuestas.ps1"
+          .\reports\test-validar-respuestas.ps1
