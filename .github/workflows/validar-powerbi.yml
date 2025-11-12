@@ -1,26 +1,39 @@
-name: Validar Power BI CSV
+name: Validar Power BI con pbi-tools
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   pull_request:
+    branches: [ main ]
 
 jobs:
   validar:
     runs-on: windows-latest
 
     steps:
-      - name: Checkout del código
-        uses: actions/checkout@v3
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
 
-      - name: Descargar e instalar pbi-tools
-        run: |
-          Invoke-WebRequest -Uri "https://github.com/pbi-tools/pbi-tools/releases/latest/download/pbi-tools-win-x64.zip" -OutFile "pbi-tools.zip"
-          Expand-Archive pbi-tools.zip -DestinationPath "$env:USERPROFILE\pbi-tools"
-          $env:Path += ";$env:USERPROFILE\pbi-tools"
-          pbi-tools version
+      - name: Descargar pbi-tools
         shell: pwsh
+        run: |
+          Invoke-WebRequest -Uri "https://github.com/mthierba/pbi-tools/releases/download/v1.2.0/pbi-tools-win-x64.zip" -OutFile "pbi-tools.zip"
+          Expand-Archive pbi-tools.zip -DestinationPath "$env:USERPROFILE\pbi-tools"
+          $env:PATH += ";$env:USERPROFILE\pbi-tools"
+          Write-Host "pbi-tools instalado correctamente."
 
-      - name: Ejecutar script de validación
-        run: pwsh ./reports/test-validar-respuestas.ps1
+      - name: Validar PBIX
+        shell: pwsh
+        run: |
+          $pbixPath = "reports/DashboardPowerBI.pbix"
+          if (Test-Path $pbixPath) {
+              Write-Host "Archivo encontrado: $pbixPath"
+              & "$env:USERPROFILE\pbi-tools\pbi-tools.exe" export-data -pbixPath $pbixPath
+          } else {
+              Write-Error "No se encontró el archivo PBIX en reports/"
+          }
+
+      - name: Validar Respuestas CSV
+        shell: pwsh
+        run: |
+          .\reports\test-validar-respuestas.ps1
