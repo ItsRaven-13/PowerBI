@@ -1,0 +1,32 @@
+name: Validar Power BI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  validar-powerbi:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout del repositorio
+      uses: actions/checkout@v3
+
+    - name: Instalar .NET 6
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '6.0.x'
+
+    - name: Instalar pbi-tools
+      run: dotnet tool install --global pbi-tools
+
+    - name: Exportar datos desde Power BI
+      run: |
+        pbi-tools export-data "./reports/DashboardPowerBI.pbip" "./Export"
+
+    - name: Ejecutar validación
+      run: |
+        pwsh ./test-validar-respuestas.ps1
