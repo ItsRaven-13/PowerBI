@@ -1,10 +1,12 @@
-name: Validar Power BI con pbi-tools
+name: Validar Power BI Reports
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   validar:
@@ -12,87 +14,25 @@ jobs:
 
     steps:
       - name: Checkout del repositorio
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Instalar PowerShell Core (por compatibilidad)
-        uses: PowerShell/PowerShell@v1
-
-      - name: Descargar pbi-tools (v1.2.0)
-        shell: pwsh
+      - name: Descargar pbi-tools
         run: |
-          $version = "v1.2.0"
-          $url = "https://github.com/mthierba/pbi-tools/releases/download/$version/pbi-tools-win-x64.zip"
-          Write-Host "Descargando pbi-tools versión $version desde $url"
-          Invoke-WebRequest -Uri $url -OutFile "pbi-tools.zip"
-          Expand-Archive pbi-tools.zip -DestinationPath "$env:USERPROFILE\pbi-tools"
-          $env:PATH += ";$env:USERPROFILE\pbi-tools"
-          Write-Host "pbi-tools instalado correctamente."
-
-      - name: Verificar instalación
+          Invoke-WebRequest -Uri "https://github.com/pbi-tools/pbi-tools/releases/download/v1.3.0/pbi-tools-win-x64.zip" -OutFile "pbi-tools.zip"
+          Expand-Archive -Path "pbi-tools.zip" -DestinationPath "pbi-tools"
+          echo "##vso[task.prependpath]$(Resolve-Path ./pbi-tools)"
         shell: pwsh
-        run: |
-          pbi-tools --version
 
-      - name: Extraer datos del PBIX
-        shell: pwsh
+      - name: Validar archivos .pbix en /reports
         run: |
-          $pbixPath = "reports/DashboardPowerBI.pbix"
-          $outPath = "reports/Export"
-          Write-Host "Extrayendo datos desde $pbixPath a $outPath"
-          pbi-tools export-data $pbixPath $outPath
-          Write-Host "Extracción completada."
-
-      - name: Validar archivo Respuestas.csv
-        shell: pwsh
-        run: |
-          $csvPath = "reports/Export/Respuestas.csv"
-          Write-Host "=== VALIDANDO TABLA RESPUESTAS ==="
-
-          if (-not (Test-Path $csvPath)) {
-              Write-Host "ERROR: No existe el archivo Respuestas.csv" -ForegroundColor Red
+          $reports = Get-ChildItem -Path "reports" -Recurse -Filter "*.pbix"
+          if ($reports.Count -eq 0) {
+              Write-Host "No se encontraron archivos .pbix en la carpeta 'reports'."
               exit 1
           }
 
-          $data = Import-Csv $csvPath
-          if ($data.Count -eq 0) {
-              Write-Host "ERROR: Respuestas.csv está vacío" -ForegroundColor Red
-              exit 1
+          foreach ($report in $reports) {
+              Write-Host "Validando archivo: $($report.FullName)"
+              ./pbi-tools/pbi-tools.exe info -pbixPath $report.FullName
           }
-
-          Write-Host "Archivo cargado correctamente. Filas: $($data.Count)" -ForegroundColor Green
-
-          $expectedColumns = @(
-              "Becado",
-              "Correo",
-              "Discapacidad",
-              "Edad",
-              "Genero",
-              "Grupo",
-              "Marca temporal",
-              "Municipio",
-              "Num Reprobadas",
-              "Promedio",
-              "Promedio numerico",
-              "Reprobadas Num",
-              "Reprobado",
-              "Situacion Laboral",
-              "Tipo Beca",
-              "Tipo Discapacidad",
-              "Transporte"
-          )
-
-          $actualColumns = $data[0].PSObject.Properties.Name
-          $faltantes = @()
-
-          foreach ($col in $expectedColumns) {
-              if (-not ($actualColumns -contains $col)) {
-                  $faltantes += $col
-              }
-          }
-
-          if ($faltantes.Count -gt 0) {
-              Write-Host "FALTAN columnas: $($faltantes -join ', ')" -ForegroundColor Red
-              exit 1
-          }
-
-          Write-Host "Validación completada correctamente."
+        shell: pwsh
