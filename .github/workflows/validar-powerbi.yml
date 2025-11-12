@@ -14,17 +14,44 @@ jobs:
       - name: Checkout del repositorio
         uses: actions/checkout@v4
 
-      - name: Descargar pbi-tools v1.2.0
+      - name: Descargar e instalar pbi-tools (modo seguro)
         shell: pwsh
         run: |
           $version = "v1.2.0"
-          $url = "https://github.com/pbi-tools/pbi-tools/releases/download/$version/pbi-tools.core.1.2.0_win-x64.zip"
-          Invoke-WebRequest -Uri $url -OutFile "pbi-tools.zip"
+          $urls = @(
+            "https://github.com/pbi-tools/pbi-tools/releases/download/$version/pbi-tools.core.1.2.0_win-x64.zip",
+            "https://github.com/pbi-tools/pbi-tools/releases/download/$version/pbi-tools.1.2.0.zip"
+          )
+
+          $downloaded = $false
+          foreach ($url in $urls) {
+            try {
+              Write-Host "Intentando descargar: $url"
+              Invoke-WebRequest -Uri $url -OutFile "pbi-tools.zip" -UseBasicParsing -ErrorAction Stop
+              $downloaded = $true
+              break
+            }
+            catch {
+              Write-Host "No se encontró en: $url"
+            }
+          }
+
+          if (-not $downloaded) {
+            Write-Host "ERROR: Ninguna versión de pbi-tools se pudo descargar."
+            exit 1
+          }
+
           Expand-Archive -Path "pbi-tools.zip" -DestinationPath "pbi-tools"
           $env:PATH += ";$(Get-Location)\pbi-tools"
-          Write-Host "pbi-tools descargado e instalado."
+          Write-Host "pbi-tools descargado e instalado correctamente."
 
-      - name: Ejecutar validación CSV
+      - name: Validar CSV de respuestas
         shell: pwsh
         run: |
-          .\reports\test-validar-respuestas.ps1
+          if (Test-Path ".\reports\test-validar-respuestas.ps1") {
+            Write-Host "Ejecutando script de validación..."
+            .\reports\test-validar-respuestas.ps1
+          } else {
+            Write-Host "ERROR: No se encontró test-validar-respuestas.ps1 dentro de reports"
+            exit 1
+          }
