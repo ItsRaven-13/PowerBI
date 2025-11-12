@@ -16,7 +16,7 @@ jobs:
 
       - name: Descargar e instalar pbi-tools
         run: |
-          Invoke-WebRequest -Uri "https://github.com/mthierba/pbi-tools/releases/latest/download/pbi-tools-win-x64.zip" -OutFile "pbi-tools.zip"
+          Invoke-WebRequest -Uri "https://github.com/pbi-tools/pbi-tools/releases/latest/download/pbi-tools-win-x64.zip" -OutFile "pbi-tools.zip"
           Expand-Archive pbi-tools.zip -DestinationPath "$env:USERPROFILE\pbi-tools"
           $env:Path += ";$env:USERPROFILE\pbi-tools"
           pbi-tools version
